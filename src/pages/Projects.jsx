@@ -4,72 +4,104 @@ import PageTransition from "../components/PageTransition";
 
 const projects = [
   {
-    title: "Smart Glass for Blind",
-    description: "IoT + AI-powered wearable for object detection and navigation assistance.",
-    tech: ["ESP32-CAM", "YOLOv5", "Bluetooth", "Google Maps API"],
-    github: "#",
+    title: "Snake and Ladder Game",
+    description:
+      "Classic Snake & Ladder board game implemented with Python. Features intuitive game logic and visual feedback.",
+    tech: ["Python", "Game Logic"],
+    github: "https://github.com/Vaibhav-dev74/snake-and-ladder",
     demo: "#",
   },
   {
-    title: "ShopSwift",
-    description: "Advanced e-commerce website with admin panel, payments, and product management.",
-    tech: ["React", "Tailwind", "MongoDB", "Razorpay"],
-    github: "#",
+    title: "Portfolio",
+    description:
+      "Personal portfolio with modern design showcasing my projects, skills, and contact links.",
+    tech: ["JavaScript", "HTML", "CSS"],
+    github: "https://github.com/Vaibhav-dev74/Portfolio",
     demo: "#",
   },
   {
-    title: "Portfolio Website",
-    description: "Creative and animated personal portfolio with dark mode and Framer Motion.",
-    tech: ["React", "Tailwind", "Framer Motion"],
-    github: "#",
+    title: "Trendhive",
+    description:
+      "Trend tracking web app built with modern JavaScript — explore topics and insights interactively.",
+    tech: ["JavaScript", "Web Dev"],
+    github: "https://github.com/Vaibhav-dev74/Trendhive",
     demo: "#",
+  },
+  {
+    title: "Attendance Management System",
+    description:
+      "Robust Java application to manage student attendance with core OOP features.",
+    tech: ["Java", "OOP"],
+    github:
+      "https://github.com/Vaibhav-dev74/Attendance-Managment-System",
+    demo: "#",
+  },
+  {
+    title: "Department Website",
+    description:
+      "Responsive departmental site built using HTML, CSS & JS — perfect for showcasing content.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/Vaibhav-dev74/Department-Website",
+    demo: "https://ltcecomputerdepartment.netlify.app/",
   },
 ];
 
 const Projects = () => {
   return (
     <PageTransition>
-      <section className="min-h-screen px-6 py-12 pt-20 text-gray-900 bg-white dark:bg-gray-900 dark:text-white">
+      <section className="min-h-screen px-8 py-16 text-gray-900 bg-white dark:bg-gray-900 dark:text-white">
         <div className="mx-auto max-w-7xl">
           <RevealOnScroll>
-            <h2 className="mb-12 text-4xl font-bold text-center">My Projects</h2>
+            <h2 className="mb-16 text-5xl font-extrabold text-center underline underline-offset-8 decoration-purple-500 dark:decoration-purple-600">
+              🚀 My Projects
+            </h2>
           </RevealOnScroll>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project, index) => (
               <RevealOnScroll key={index} delay={index * 0.2}>
                 <motion.div
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                  className="p-6 bg-gray-100 shadow-lg dark:bg-gray-800 rounded-2xl"
+                  whileHover={{ translateY: -8, scale: 1.04 }}
+                  transition={{ type: "spring", stiffness: 310 }}
+                  className="p-6 border border-gray-200 shadow-xl bg-gray-50 dark:bg-gray-800 dark:border-gray-700 hover:shadow-2xl rounded-3xl"
                 >
-                  <h3 className="mb-2 text-xl font-bold">{project.title}</h3>
-                  <p className="mb-3">{project.description}</p>
+                  <h3 className="mb-3 text-2xl font-semibold text-purple-700 dark:text-purple-300">
+                    {project.title}
+                  </h3>
+                  <p className="mb-4 text-sm md:text-base">
+                    {project.description}
+                  </p>
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tech.map((t, i) => (
                       <span
                         key={i}
-                        className="px-2 py-1 text-sm text-purple-800 bg-purple-200 rounded-full dark:bg-purple-700 dark:text-white"
+                        className="px-3 py-1 text-xs font-medium text-purple-800 bg-purple-200 rounded-full dark:bg-purple-700 dark:text-white"
                       >
                         {t}
                       </span>
                     ))}
                   </div>
+
                   <div className="flex gap-4">
                     <a
                       href={project.github}
                       target="_blank"
-                      className="text-sm font-medium text-purple-700 dark:text-purple-300 hover:underline"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1 text-sm font-semibold text-white bg-purple-600 rounded-lg hover:bg-purple-700"
                     >
-                      GitHub →
+                      GitHub
                     </a>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      className="text-sm font-medium text-purple-700 dark:text-purple-300 hover:underline"
-                    >
-                      Live Demo →
-                    </a>
+                    {project.demo !== "#" && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="px-3 py-1 text-sm font-semibold text-purple-700 border border-purple-700 rounded-lg hover:bg-purple-100 dark:hover:bg-purple-800"
+                      >
+                        Live Demo
+                      </a>
+                    )}
                   </div>
                 </motion.div>
               </RevealOnScroll>

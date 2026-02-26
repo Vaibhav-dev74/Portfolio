@@ -6,7 +6,17 @@ export default {
   ],
   darkMode: "class",
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        'scroll-horizontal': 'scroll 20s linear infinite',
+      },
+    },
   },
   plugins: [],
 };
