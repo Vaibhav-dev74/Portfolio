@@ -9,12 +9,13 @@ export default {
     extend: {
       keyframes: {
         scroll: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(-100%)' },
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
       animation: {
-        'scroll-horizontal': 'scroll 20s linear infinite',
+        scroll: 'scroll 25s linear infinite',
+        'scroll-horizontal': 'scroll 25s linear infinite',
       },
     },
   },
