@@ -20,11 +20,11 @@
       content="Vaibhav Pratap Mishra, AI Engineer, Full-Stack Developer, Python Developer, RAG, Agentic AI, IntelliResume AI, TrashBot, Mumbai, LTCE"
     />
     <meta name="author" content="Vaibhav Pratap Mishra" />
-    <link rel="canonical" href="https://portfolio-sepia-ten-20.vercel.app" />
+    <link rel="canonical" href="https://vaibhav-pratap-mishra.vercel.app" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://portfolio-sepia-ten-20.vercel.app" />
+    <meta property="og:url" content="https://vaibhav-pratap-mishra.vercel.app" />
     <meta
       property="og:title"
       content="Vaibhav Pratap Mishra | AI Engineer & Full-Stack Developer"
@@ -37,7 +37,7 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://portfolio-sepia-ten-20.vercel.app" />
+    <meta property="twitter:url" content="https://vaibhav-pratap-mishra.vercel.app" />
     <meta
       property="twitter:title"
       content="Vaibhav Pratap Mishra | AI Engineer & Full-Stack Developer"
@@ -55,8 +55,23 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Immediate theme initialization script to prevent FOUC -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('theme');
+          var theme = saved ? saved : 'dark';
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
-  <body class="bg-slate-950 text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950">
+  <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased selection:bg-cyan-500 selection:text-slate-950 transition-colors duration-200">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

@@ -3,6 +3,17 @@
  * Professional Identity: AI Engineer | Full-Stack Developer | Python Developer
  */
 
+import agenticAiCert from "../assets/Agentic AI.jpg";
+import avishkarCert from "../assets/Avishkar2025.jpg";
+import bhartInternCert from "../assets/bhart intern_pages.jpg";
+import codeSprintCert from "../assets/codeSprint.jpg";
+import cu26Cert from "../assets/CU 2025-2026.jpg";
+import cu24Cert from "../assets/CU2023-2024.jpg";
+import cu25Cert from "../assets/CUA 2024-2025.jpg";
+import dataFundamentalsCert from "../assets/DataFundamentals_Badge20240725-7-69m1z8_page-0001.jpg";
+import ibmInternCert from "../assets/IBM SkillsBuild Data Analytics Summer Internship Certificate.jpg";
+import talentBattleCert from "../assets/Talent batel.jpg";
+
 export const personalInfo = {
   name: "Vaibhav Pratap Mishra",
   title: "AI Engineer | Full-Stack Developer | Python Developer",
@@ -11,11 +22,11 @@ export const personalInfo = {
     "Computer Engineering graduate passionate about building AI-powered applications, intelligent automation systems, modern web experiences, and practical IoT solutions.",
   about:
     "I am a Computer Engineering graduate from Lokmanya Tilak College of Engineering, Mumbai University, interested in building practical software solutions at the intersection of artificial intelligence, full-stack development, and connected systems.\n\nI work with Python, SQL, modern web technologies, and AI development tools to transform ideas into functional applications. My projects include AI-powered resume analysis, intelligent home renovation planning, AI-based food analysis, and an app-driven robotic waste management system.\n\nThrough hands-on projects, internship experience, and technical competitions, I continue to strengthen my problem-solving, software development, and engineering skills. I am looking for opportunities where I can contribute to meaningful products, learn from experienced teams, and grow as an AI or software engineer.",
-  email: "vaibhavmishra.dev@gmail.com",
+  email: "mishravaibhavpratap@gmail.com",
   location: "Mumbai, India",
   github: "https://github.com/Vaibhav-dev74",
   linkedin: "https://linkedin.com/in/vaibhav-pratap-mishra-b417ab2b6/",
-  livePortfolio: "https://portfolio-sepia-ten-20.vercel.app",
+  livePortfolio: "https://vaibhav-pratap-mishra.vercel.app",
   resumeUrl: "/VaibhavPratapMishra.pdf",
   profileImage: "/images/Vaibhav.jpeg",
   openToOpportunities: true,
@@ -344,70 +355,130 @@ export const achievementsData = [
 
 export const certificationsData = [
   {
-    title: "Full Stack Developer",
-    issuer: "Bharat Intern",
-    category: "Internship",
-    date: "June 2024",
-    credentialId: "BHART-INT-0624",
-    verifyLink: null,
-    file: "/certificates/bhart intern_pages-to-jpg-0001.jpg",
+    title: "Oracle Certified Foundations Associate — Agentic AI",
+    issuer: "Oracle University",
+    category: "Certification",
+    date: "September 17, 2026",
+    validity: "Valid until September 17, 2028",
+    credentialId: "331864285AAI26OFA",
+    verifyLink: "https://catalog-education.oracle.com/",
+    file: agenticAiCert,
     type: "image",
-    description: "Industry internship certification focusing on practical full-stack web development.",
+    description:
+      "Recognized by Oracle Corporation as an Oracle Certified Foundations Associate in Agentic AI, demonstrating foundational understanding of autonomous AI agents and architectural patterns.",
   },
   {
     title: "Data Analytics Summer Internship",
-    issuer: "IBM SkillsBuild / CSRBOX",
+    issuer: "CSRBOX / IBM SkillsBuild",
     category: "Internship",
-    date: "July 2024",
-    credentialId: "IBM-DA-2024-07-VAIBHAV",
-    verifyLink: "https://www.credly.com/",
-    file: "/certificates/Ibm_page-0001.jpg",
-    type: "image",
-    description: "Completed comprehensive data analytics and IoT program with project assessment.",
-  },
-  {
-    title: "Python Programming",
-    issuer: "CodeSprint Technologies / Edunet Foundation",
-    category: "Course",
-    date: "August 2024",
-    credentialId: "CSP-PY-2024",
+    date: "August 5, 2024",
+    tenure: "24th June 2024 – 5th August 2024",
+    credentialId: "155ENs5N4QCGwiMNcaqhNcA69SW3ApDw0",
+    internshipId: "IBMSB24DASI24Je5AtCB",
+    uniqueId: "IBM2375",
     verifyLink: null,
-    file: "/certificates/113-Vaibhav.jpg",
+    file: ibmInternCert,
     type: "image",
-    description: "Certification covering Python scripting, automation, and algorithmic problem-solving.",
+    description:
+      "Successfully completed a 6-week industry internship program in Data Analytics hosted by CSRBOX in collaboration with IBM SkillsBuild, including hands-on project evaluation.",
   },
   {
-    title: "Artificial Intelligence & SAP Conversational AI Chatbot",
-    issuer: "Edunet Foundation",
-    category: "Course",
-    date: "2024",
-    credentialId: "EDUNET-AI-SAP-2024",
+    title: "Python Developer Internship",
+    issuer: "CodeSprint Technologies",
+    category: "Internship",
+    date: "August 18, 2024",
+    tenure: "19th July 2024 – 18th August 2024",
+    credentialId: "CSTPYTHJU24013",
     verifyLink: null,
-    file: "/certificates/Vaibhav Pratap Mishra_AC.pdf",
-    type: "pdf",
-    description: "Certified in conversational AI architecture, chatbot workflows, and NLP fundamentals.",
+    file: codeSprintCert,
+    type: "image",
+    description:
+      "Completed a one-month internship as an Intern Python Developer at CodeSprint Technologies, developing Python automation scripts and modular data utilities.",
   },
   {
-    title: "Data Fundamentals Badge",
-    issuer: "IBM",
+    title: "Full Stack Development Virtual Internship",
+    issuer: "Bharat Intern (AICTE Verified)",
+    category: "Internship",
+    date: "August 22, 2024",
+    tenure: "July 10, 2024 – August 10, 2024",
+    credentialId: "BILAMEIK",
+    verifyLink: null,
+    file: bhartInternCert,
+    type: "image",
+    description:
+      "Completed Virtual Internship Program at Bharat Intern LLP in Full Stack Development, covering front-end and back-end web technologies.",
+  },
+  {
+    title: "Data Fundamentals",
+    issuer: "IBM SkillsBuild",
     category: "Badge",
-    date: "July 2024",
-    credentialId: "IBM-DF-2024",
-    verifyLink: "https://www.credly.com/",
-    file: "/certificates/DataFundamentals_Badge20240725-7-69m1z8_page-0001.jpg",
+    date: "July 17, 2024",
+    credentialId: "roLTWXn9",
+    verifyLink: "https://www.credly.com/go/roLTWXn9",
+    file: dataFundamentalsCert,
     type: "image",
-    description: "IBM verified badge validating solid foundation in data concepts and analytics.",
+    description:
+      "IBM verified credential validating core understanding of data concepts, data architectures, analytics workflows, and data governance.",
   },
   {
-    title: "Full Stack Web Development",
-    issuer: "Professional Training Program",
+    title: "Emerging Technologies — Advanced Competitive Coding & SAP HANA",
+    issuer: "Edunet Foundation / Code Unnati (Supported by SAP)",
     category: "Course",
-    date: "March 2024",
-    credentialId: "FSWD-2024-VAIBHAV",
+    date: "2025–2026",
+    credentialId: "CU26_31411",
     verifyLink: null,
-    file: "/certificates/3753_Vaibhav Pratap Mishra _Full Stack Web-Development.jpg",
+    file: cu26Cert,
     type: "image",
-    description: "Full stack training covering React, Node.js, REST APIs, and modern styling.",
+    description:
+      "Participated in Value Added Course and completed training on Emerging Technologies (Advanced Competitive Coding & SAP HANA) under the CodeUnnati Program, a CSR initiative of SAP.",
+  },
+  {
+    title: "Emerging Technologies — ML, IoT, Deep Learning & SAP ABAP on BTP",
+    issuer: "Edunet Foundation / Code Unnati (Supported by SAP)",
+    category: "Course",
+    date: "2024–2025",
+    credentialId: "CU25_6074",
+    verifyLink: null,
+    file: cu25Cert,
+    type: "image",
+    description:
+      "Completed Advance Course on Machine Learning, Internet of Things, Deep Learning, Computer Vision, and SAP ABAP on Business Technology Platform (BTP).",
+  },
+  {
+    title: "Python Programming, Data Analysis & Conversational AI Chatbot",
+    issuer: "Edunet Foundation / Code Unnati (Supported by SAP)",
+    category: "Course",
+    date: "2023–2024",
+    credentialId: "CU24_6074",
+    verifyLink: null,
+    file: cu24Cert,
+    type: "image",
+    description:
+      "Completed Foundation Course on Python Programming, Data Analysis with Python, Artificial Intelligence, and SAP Conversational AI Chatbot under Code Unnati Program.",
+  },
+  {
+    title: "Python Programming — Campus Recruitment Training",
+    issuer: "Talent Battle",
+    category: "Course",
+    date: "March 16, 2025",
+    credentialId: "LTCOETB123",
+    verifyLink: "https://talentbattle.in",
+    file: talentBattleCert,
+    type: "image",
+    description:
+      "Completed 60 hours of comprehensive Python Programming and Campus Recruitment Training conducted by Talent Battle at Lokmanya Tilak College of Engineering.",
+  },
+  {
+    title: "20th Aavishkar Research Convention — TrashBot",
+    issuer: "University of Mumbai",
+    category: "Competition",
+    date: "December 9, 2025",
+    credentialId: "Zone X (Engineering Colleges/Institutes)",
+    verifyLink: null,
+    file: avishkarCert,
+    type: "image",
+    description:
+      "Presented research project 'TrashBot: App-Driven Robotic Dustbin' in Pure Sciences Category at 20th Aavishkar Inter-Collegiate Research Convention organized by University of Mumbai at A.P. Shah Institute of Technology.",
   },
 ];
 
@@ -440,7 +511,7 @@ export const faqAssistantData = [
     id: "contact",
     query: "How can I contact Vaibhav?",
     summary:
-      "You can contact Vaibhav directly via email at vaibhavmishra.dev@gmail.com, connect on LinkedIn at https://linkedin.com/in/vaibhav-pratap-mishra-b417ab2b6/, or explore his repositories on GitHub at https://github.com/Vaibhav-dev74.",
+      "You can contact Vaibhav directly via email at mishravaibhavpratap@gmail.com, connect on LinkedIn at https://linkedin.com/in/vaibhav-pratap-mishra-b417ab2b6/, or explore his repositories on GitHub at https://github.com/Vaibhav-dev74.",
   },
   {
     id: "experience",

@@ -74,13 +74,13 @@ const AIAssistantModal = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 left-6 z-40 flex items-center gap-2 px-4 py-2.5 text-xs font-semibold text-cyan-300 bg-slate-900/90 dark:bg-slate-900/90 border border-cyan-500/40 rounded-full shadow-xl backdrop-blur-md hover:bg-slate-800 hover:border-cyan-400 hover:shadow-cyan-500/20"
+          className="fixed bottom-6 left-6 z-40 flex items-center gap-2 px-4 py-2.5 text-xs font-semibold text-cyan-700 dark:text-cyan-300 bg-white/95 dark:bg-slate-900/90 border border-slate-200 dark:border-cyan-500/40 rounded-full shadow-xl backdrop-blur-md hover:bg-slate-50 dark:hover:bg-slate-800 hover:border-cyan-500 hover:shadow-cyan-500/20 transition"
         >
           <span className="relative flex w-2 h-2">
             <span className="absolute inline-flex w-full h-full rounded-full opacity-75 animate-ping bg-cyan-400"></span>
             <span className="relative inline-flex w-2 h-2 rounded-full bg-cyan-500"></span>
           </span>
-          <Sparkles size={15} className="text-cyan-400" />
+          <Sparkles size={15} className="text-cyan-600 dark:text-cyan-400" />
           <span>Ask Portfolio AI</span>
         </motion.button>
       )}
@@ -93,25 +93,25 @@ const AIAssistantModal = () => {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             transition={{ duration: 0.25 }}
-            className="fixed bottom-6 left-4 right-4 md:right-auto md:left-6 z-50 w-auto md:w-96 max-h-[85vh] flex flex-col bg-slate-900 border border-cyan-500/30 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-xl"
+            className="fixed bottom-6 left-4 right-4 md:right-auto md:left-6 z-50 w-auto md:w-96 max-h-[85vh] flex flex-col bg-white dark:bg-slate-900 border border-slate-200 dark:border-cyan-500/30 rounded-2xl shadow-2xl overflow-hidden backdrop-blur-xl"
           >
             {/* Header */}
-            <div className="flex items-center justify-between px-4 py-3 border-b bg-slate-950/80 border-slate-800">
+            <div className="flex items-center justify-between px-4 py-3 border-b bg-slate-50 dark:bg-slate-950/80 border-slate-200 dark:border-slate-800">
               <div className="flex items-center gap-2.5">
-                <div className="p-1.5 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                <div className="p-1.5 rounded-lg bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20">
                   <Bot size={18} />
                 </div>
                 <div>
-                  <h3 className="text-sm font-bold text-white">Portfolio AI Assistant</h3>
-                  <p className="text-[10px] text-cyan-400/90 flex items-center gap-1 font-mono">
-                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 inline-block"></span>
+                  <h3 className="text-sm font-bold text-slate-900 dark:text-white">Portfolio AI Assistant</h3>
+                  <p className="text-[10px] text-cyan-600 dark:text-cyan-400/90 flex items-center gap-1 font-mono">
+                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 dark:bg-cyan-400 inline-block"></span>
                     Factual • Data-Driven
                   </p>
                 </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition"
+                className="p-1.5 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition"
                 aria-label="Close assistant"
               >
                 <X size={16} />
@@ -119,12 +119,12 @@ const AIAssistantModal = () => {
             </div>
 
             {/* Quick Prompt Chips */}
-            <div className="p-2 border-b bg-slate-950/40 border-slate-800/80 flex flex-wrap gap-1.5 max-h-24 overflow-y-auto">
+            <div className="p-2 border-b bg-slate-50/60 dark:bg-slate-950/40 border-slate-200 dark:border-slate-800/80 flex flex-wrap gap-1.5 max-h-24 overflow-y-auto">
               {faqAssistantData.slice(0, 4).map((faq) => (
                 <button
                   key={faq.id}
                   onClick={() => handleQuery(faq.query)}
-                  className="px-2.5 py-1 text-[11px] font-medium text-slate-300 bg-slate-800/70 hover:bg-cyan-950 hover:text-cyan-300 border border-slate-700/60 hover:border-cyan-500/40 rounded-full transition truncate max-w-full text-left"
+                  className="px-2.5 py-1 text-[11px] font-medium text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800/70 hover:bg-cyan-50 dark:hover:bg-cyan-950 hover:text-cyan-700 dark:hover:text-cyan-300 border border-slate-200 dark:border-slate-700/60 hover:border-cyan-500/40 rounded-full transition truncate max-w-full text-left"
                 >
                   {faq.query}
                 </button>
@@ -139,21 +139,21 @@ const AIAssistantModal = () => {
                   className={`flex gap-2.5 ${msg.sender === "user" ? "justify-end" : "justify-start"}`}
                 >
                   {msg.sender === "bot" && (
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-600 dark:text-cyan-400">
                       <Bot size={13} />
                     </div>
                   )}
                   <div
                     className={`p-3 rounded-2xl max-w-[82%] leading-relaxed ${
                       msg.sender === "user"
-                        ? "bg-cyan-600 text-white rounded-br-none"
-                        : "bg-slate-800/90 text-slate-200 border border-slate-700/60 rounded-bl-none"
+                        ? "bg-cyan-600 text-white rounded-br-none shadow"
+                        : "bg-slate-100 dark:bg-slate-800/90 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700/60 rounded-bl-none"
                     }`}
                   >
                     {msg.text}
                   </div>
                   {msg.sender === "user" && (
-                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-slate-700 flex items-center justify-center text-slate-200">
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-slate-300 dark:bg-slate-700 flex items-center justify-center text-slate-700 dark:text-slate-200">
                       <User size={13} />
                     </div>
                   )}
@@ -162,19 +162,19 @@ const AIAssistantModal = () => {
             </div>
 
             {/* Input Bar */}
-            <div className="p-2.5 border-t bg-slate-950/90 border-slate-800 flex items-center gap-2">
+            <div className="p-2.5 border-t bg-slate-50 dark:bg-slate-950/90 border-slate-200 dark:border-slate-800 flex items-center gap-2">
               <input
                 type="text"
                 placeholder="Ask about projects, skills, TrashBot..."
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyPress={handleKeyPress}
-                className="flex-1 px-3 py-2 text-xs text-white bg-slate-900 border rounded-xl border-slate-700/80 focus:outline-none focus:border-cyan-400 placeholder:text-slate-500"
+                className="flex-1 px-3 py-2 text-xs text-slate-900 dark:text-white bg-white dark:bg-slate-900 border rounded-xl border-slate-300 dark:border-slate-700/80 focus:outline-none focus:border-cyan-500 dark:focus:border-cyan-400 placeholder:text-slate-400 dark:placeholder:text-slate-500 shadow-sm"
               />
               <button
                 onClick={() => handleQuery(inputValue)}
                 disabled={!inputValue.trim()}
-                className="p-2 text-white bg-cyan-600 hover:bg-cyan-500 disabled:opacity-40 disabled:hover:bg-cyan-600 rounded-xl transition"
+                className="p-2 text-white bg-cyan-600 hover:bg-cyan-500 disabled:opacity-40 disabled:hover:bg-cyan-600 rounded-xl transition shadow"
                 aria-label="Send query"
               >
                 <Send size={14} />

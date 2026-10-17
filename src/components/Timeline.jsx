@@ -2,37 +2,30 @@ import { motion } from "framer-motion";
 import {
   Briefcase,
   GraduationCap,
-  Code2,
   Trophy,
   Cpu,
   Sparkles,
   Award,
+  CheckCircle2,
+  BookOpen,
 } from "lucide-react";
 
 const timelineItems = [
   {
-    title: "AI & Full-Stack Engineering Platform Development",
-    place: "Independent & Open Source",
-    date: "2024 – Present",
-    icon: <Sparkles size={18} />,
-    description:
-      "Architected and deployed IntelliResume AI on Vercel, designed multi-agent workflows in AI Home Renovation with Google Gemini & ADK, and engineered the RestoAI restaurant management system.",
-  },
-  {
-    title: "Tantragyan 2026 National Competition (Rank 4)",
-    place: "LTCE National Level Competition",
-    date: "2026",
-    icon: <Award size={18} />,
-    description:
-      "Awarded First Consolation Prize (Rank 4 among 65+ teams) for TrashBot — an app-driven robotic dustbin with computer vision-based waste segregation and mobile control.",
-  },
-  {
-    title: "B.E. Computer Engineering",
+    title: "B.E. in Computer Engineering",
     place: "Lokmanya Tilak College of Engineering, Mumbai University",
     date: "2022 – 2026",
     icon: <GraduationCap size={18} />,
     description:
-      "Rigorous coursework in Data Structures & Algorithms, Artificial Intelligence, Database Management Systems, Computer Networks, and Internet of Things.",
+      "Commenced undergraduate engineering studies. Core foundations in Data Structures & Algorithms, Artificial Intelligence, Database Management Systems, and Computer Networks.",
+  },
+  {
+    title: "Foundation in Python, AI & Conversational Chatbots",
+    place: "Edunet Foundation / Code Unnati (Supported by SAP)",
+    date: "2023 – 2024",
+    icon: <BookOpen size={18} />,
+    description:
+      "Completed structured training in Python Programming, Data Analysis with Python, Artificial Intelligence, and SAP Conversational AI Chatbots under the SAP Code Unnati Program.",
   },
   {
     title: "Python Developer Intern",
@@ -40,31 +33,71 @@ const timelineItems = [
     date: "June 2024 – August 2024",
     icon: <Briefcase size={18} />,
     description:
-      "Worked on Python scripting, automation, and data analysis tasks, gaining practical exposure to programming workflows and modular software development.",
+      "Engineered Python scripts for automation, data processing utilities, and modular backend tasks, strengthening core software engineering practices.",
   },
   {
-    title: "IBM SkillsBuild Summer Internship",
-    place: "IBM SkillsBuild CSRBOX",
-    date: "24 June 2024 – 5 August 2024",
+    title: "Data Analytics Summer Internship",
+    place: "IBM SkillsBuild / CSRBOX",
+    date: "June 2024 – August 2024",
     icon: <Briefcase size={18} />,
     description:
-      "Completed structured data analytics and IoT program. Contributed to IoT-based TrashBot project with sensor integration and telemetry automation logic.",
+      "Completed 6-week industry internship in Data Analytics. Contributed to IoT telemetry and automation logic for the TrashBot robotic project.",
   },
   {
-    title: "Secretary – Coding Club",
-    place: "Lokmanya Tilak College of Engineering",
-    date: "2024 – 2025",
-    icon: <Trophy size={18} />,
+    title: "Full Stack Development Virtual Internship",
+    place: "Bharat Intern (AICTE Verified)",
+    date: "July 2024 – August 2024",
+    icon: <Briefcase size={18} />,
     description:
-      "Spearheaded technical events, coding competitions, and hackathons; mentored junior students in data structures and modern programming.",
+      "Gained hands-on experience building responsive web interfaces, full-stack workflows, and database-integrated applications.",
   },
   {
-    title: "Smart Glass for Blind People",
+    title: "Smart Glass for Visually Impaired",
     place: "Assistive IoT + Edge AI",
     date: "2024",
     icon: <Cpu size={18} />,
     description:
-      "Built an ESP32-CAM wearable running YOLO object detection with real-time Bluetooth audio feedback and Android navigation support.",
+      "Engineered an assistive wearable prototype with ESP32-CAM and YOLO object detection, providing real-time Bluetooth audio obstacle guidance.",
+  },
+  {
+    title: "Secretary – Coding Club & Advance ML/IoT",
+    place: "LTCE & SAP Code Unnati",
+    date: "2024 – 2025",
+    icon: <Trophy size={18} />,
+    description:
+      "Elected Secretary of the LTCE Coding Club; organized hackathons and mentoring sessions while completing advanced training in Deep Learning, Computer Vision, and SAP ABAP on BTP.",
+  },
+  {
+    title: "20th Aavishkar Research Convention — TrashBot",
+    place: "University of Mumbai (Zone X)",
+    date: "December 2025",
+    icon: <Award size={18} />,
+    description:
+      "Selected to represent LTCE at the 20th Aavishkar Inter-Collegiate Research Convention organized by University of Mumbai, presenting TrashBot in the Pure Sciences Category.",
+  },
+  {
+    title: "Advanced Competitive Coding & SAP HANA",
+    place: "Edunet Foundation / Code Unnati (Supported by SAP)",
+    date: "2025 – 2026",
+    icon: <BookOpen size={18} />,
+    description:
+      "Completed Value Added Course training in Advanced Competitive Coding and SAP HANA enterprise data solutions under the SAP CodeUnnati Program.",
+  },
+  {
+    title: "Tantragyan 2026 National Competition (Rank 4)",
+    place: "LTCE National Level Competition",
+    date: "2026",
+    icon: <Award size={18} />,
+    description:
+      "Awarded First Consolation Prize (Rank 4 among 65+ teams) for TrashBot — an app-driven robotic dustbin combining OpenCV computer vision, robotics, and mobile app control.",
+  },
+  {
+    title: "AI & Full-Stack Platform Engineering",
+    place: "Independent & Open Source",
+    date: "2024 – Present",
+    icon: <Sparkles size={18} />,
+    description:
+      "Architected and deployed IntelliResume AI on Vercel, designed multi-agent workflows in AI Home Renovation with Google Gemini & ADK, and engineered the RestoAI restaurant system.",
   },
 ];
 
@@ -72,10 +105,10 @@ const Timeline = () => {
   return (
     <section className="relative px-4 py-12">
       <div className="text-center mb-12">
-        <span className="text-xs font-mono uppercase tracking-wider text-cyan-400">
+        <span className="text-xs font-mono uppercase tracking-wider text-cyan-600 dark:text-cyan-400">
           Chronological Progress
         </span>
-        <h3 className="text-3xl font-extrabold text-white mt-1">
+        <h3 className="text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
           Engineering Journey & Milestones
         </h3>
       </div>
@@ -89,14 +122,14 @@ const Timeline = () => {
             key={index}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.08 }}
+            transition={{ duration: 0.5, delay: index * 0.06 }}
             viewport={{ once: true }}
             className={`relative mb-10 flex flex-col md:flex-row ${
               index % 2 === 0 ? "md:justify-start" : "md:justify-end"
             }`}
           >
             {/* Circle Icon */}
-            <div className="absolute z-10 p-2.5 text-slate-950 transform -translate-x-1/2 rounded-full shadow-lg left-4 md:left-1/2 bg-gradient-to-tr from-cyan-400 to-blue-500 ring-4 ring-slate-950">
+            <div className="absolute z-10 p-2.5 text-slate-950 transform -translate-x-1/2 rounded-full shadow-lg left-4 md:left-1/2 bg-gradient-to-tr from-cyan-400 to-blue-500 ring-4 ring-slate-50 dark:ring-slate-950">
               {item.icon}
             </div>
 
@@ -106,16 +139,16 @@ const Timeline = () => {
                 index % 2 === 0 ? "md:pr-10 md:text-right" : "md:pl-10"
               }`}
             >
-              <div className="p-5 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-xl hover:border-slate-700 transition">
-                <h4 className="text-base font-bold text-white">
+              <div className="p-5 rounded-2xl bg-white dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 shadow-md dark:shadow-xl hover:border-cyan-500/40 dark:hover:border-slate-700 transition">
+                <h4 className="text-base font-bold text-slate-900 dark:text-white">
                   {item.title}
                 </h4>
 
-                <p className="mt-1 text-xs font-semibold text-cyan-400">
-                  {item.place} • <span className="font-mono text-slate-400">{item.date}</span>
+                <p className="mt-1 text-xs font-semibold text-cyan-700 dark:text-cyan-400">
+                  {item.place} • <span className="font-mono text-slate-500 dark:text-slate-400">{item.date}</span>
                 </p>
 
-                <p className="mt-2.5 text-xs leading-relaxed text-slate-300">
+                <p className="mt-2.5 text-xs leading-relaxed text-slate-600 dark:text-slate-300">
                   {item.description}
                 </p>
               </div>
